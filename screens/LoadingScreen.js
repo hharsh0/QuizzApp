@@ -1,11 +1,15 @@
-import { Pressable, StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import theme from '../constants/theme'
 import LottieView from "lottie-react-native";
-import PrimaryButton from '../components/PrimaryButton';
+import theme from '../constants/theme';
 
 
-const StartScreen = ({ navigation }) => {
+const LoadingScreen = ({ navigation }) => {
+
+  setInterval( ()=>{
+    navigation.navigate("Result")
+  }, 5000);
+  
   return (
     <View style={styles.rootContainer}>
       <View style={styles.animationContainer}>
@@ -16,19 +20,14 @@ const StartScreen = ({ navigation }) => {
             height: 400,
             backgroundColor: "#B1E1FF",
           }}
-          source={require("../assets/animations/start.json")}
+          source={require("../assets/animations/end.json")}
         />
-      </View>
-      <View style={styles.buttonContainer}>
-        <PrimaryButton onPress={() => navigation.navigate("Quiz")}>
-          Start
-        </PrimaryButton>
       </View>
     </View>
   );
 }
 
-export default StartScreen
+export default LoadingScreen
 
 const styles = StyleSheet.create({
   rootContainer: {
@@ -42,11 +41,5 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     marginBottom: 80,
-  },
-  buttonContainer: {
-    width: "100%",
-    position: "absolute",
-    bottom: 0,
-    // marginBottom: 40,
   },
 });
