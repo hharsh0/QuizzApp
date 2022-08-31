@@ -13,13 +13,6 @@ const Result = ({ navigation, route }) => {
       <Title titleText="RESULTS" />
       <Text style={styles.scoreValue}>{score}</Text>
       <View style={styles.bannerContainer}>
-        {/* <Image
-          source={{
-            uri: resultBanner,
-          }}
-          style={styles.banner}
-          resizeMode="contain"
-        /> */}
         {score > 10 ? (
           <Image
             source={require("../assets/images/winnerpng.png")}

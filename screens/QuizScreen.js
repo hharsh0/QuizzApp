@@ -21,7 +21,7 @@ const Quiz = ({ navigation }) => {
   const [isLoading, setIsLoading] = useState(false);
 
   const URL =
-    "https://opentdb.com/api.php?amount=10&category=18&difficulty=easy&type=multiple&encode=url3986"
+    "https://opentdb.com/api.php?amount=10&category=18&difficulty=medium&type=multiple&encode=url3986";
   
   const getQuestions = async () => {
     setIsLoading(true);
@@ -86,7 +86,7 @@ const Quiz = ({ navigation }) => {
           <View style={styles.root}>
             <View style={styles.top}>
               <Text style={styles.question}>
-                {decodeURIComponent(questions[ques].question)}
+                Q. {decodeURIComponent(questions[ques].question)}
               </Text>
             </View>
             <View style={styles.options}>
