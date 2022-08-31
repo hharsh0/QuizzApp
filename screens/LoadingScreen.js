@@ -6,10 +6,10 @@ import theme from '../constants/theme';
 
 const LoadingScreen = ({ navigation }) => {
 
-  setInterval( ()=>{
-    navigation.navigate("Result")
-  }, 5000);
-  
+  // setInterval( ()=>{
+  //   navigation.navigate("Result")
+  // }, 5000);
+
   return (
     <View style={styles.rootContainer}>
       <View style={styles.animationContainer}>
@@ -18,7 +18,7 @@ const LoadingScreen = ({ navigation }) => {
           style={{
             width: 400,
             height: 400,
-            backgroundColor: "#B1E1FF",
+            backgroundColor: theme.primary100,
           }}
           source={require("../assets/animations/end.json")}
         />

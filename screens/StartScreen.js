@@ -1,8 +1,9 @@
-import { Pressable, StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import theme from '../constants/theme'
 import LottieView from "lottie-react-native";
 import PrimaryButton from '../components/PrimaryButton';
+import NavigationButton from '../components/NavigationButton';
 
 
 const StartScreen = ({ navigation }) => {
@@ -14,15 +15,15 @@ const StartScreen = ({ navigation }) => {
           style={{
             width: 400,
             height: 400,
-            backgroundColor: "#B1E1FF",
+            backgroundColor: theme.primary100,
           }}
           source={require("../assets/animations/start.json")}
         />
       </View>
       <View style={styles.buttonContainer}>
-        <PrimaryButton onPress={() => navigation.navigate("Quiz")}>
-          Start
-        </PrimaryButton>
+        <NavigationButton onPress={() => navigation.navigate("Quiz")}>
+          START
+        </NavigationButton>
       </View>
     </View>
   );
@@ -47,6 +48,5 @@ const styles = StyleSheet.create({
     width: "100%",
     position: "absolute",
     bottom: 0,
-    // marginBottom: 40,
   },
 });

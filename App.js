@@ -12,7 +12,7 @@ const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: theme.primary100 }}>
+    <SafeAreaView style={{ flex: 1}}>
       <NavigationContainer>
         <Stack.Navigator>
           <Stack.Screen

@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, Pressable } from 'react-native'
-import theme from "../constants/theme"
+import theme from '../constants/theme'
 
-const PrimaryButton = ({ children, onPress }) => {
+const NavigationButton = ({children, onPress}) => {
   return (
     <View style={styles.buttonOuterContainer}>
       <Pressable
@@ -17,13 +17,14 @@ const PrimaryButton = ({ children, onPress }) => {
       </Pressable>
     </View>
   );
-};
+}
 
-export default PrimaryButton
+export default NavigationButton
+
 
 const styles = StyleSheet.create({
   buttonOuterContainer: {
-    borderRadius: '50%',
+    borderRadius: 16,
     margin: 4,
     overflow: "hidden",
   },
