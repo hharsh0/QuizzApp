@@ -29,9 +29,11 @@ const Result = ({ navigation, route }) => {
           />
         )}
       </View>
-      <NavigationButton onPress={() => navigation.navigate("Start")}>
-        GO TO HOME
-      </NavigationButton>
+      <View style={styles.buttonContainer}>
+        <NavigationButton onPress={() => navigation.navigate("Start")}>
+          GO TO HOME
+        </NavigationButton>
+      </View>
     </View>
   );
 };
@@ -71,4 +73,7 @@ const styles = StyleSheet.create({
     fontWeight: "800",
     alignSelf: "center",
   },
+  buttonContainer: {
+    marginBottom: 10,
+  }
 });
