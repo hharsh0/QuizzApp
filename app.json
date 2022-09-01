@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "quizzApp",
+    "name": "Quizzy",
     "slug": "quizzApp",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -25,7 +25,8 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "package": "com.hharsh.quizzApp"
+      "package": "com.hharsh.quizzApp",
+      "versionCode": 1
     },
     "web": {
       "favicon": "./assets/favicon.png"
